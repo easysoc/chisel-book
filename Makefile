@@ -1,5 +1,6 @@
 
 DOC=chisel-book
+DOC_CN=chisel-book_CN
 
 all: test gencode fig book genslides
 
@@ -15,13 +16,20 @@ gencode:
 fig:
 	make -C figures
 
-book:
+book: gencode fig
 	pdflatex $(DOC)
 	bibtex $(DOC)
 	makeindex $(DOC)
 	pdflatex $(DOC)
 	pdflatex $(DOC)
 
+cn: gencode fig
+	xelatex $(DOC_CN)
+	bibtex $(DOC_CN)
+	makeindex $(DOC_CN)
+	xelatex $(DOC_CN)
+	xelatex $(DOC_CN)
+	
 genslides:
 	cd slides; ./doslides.sh
 
