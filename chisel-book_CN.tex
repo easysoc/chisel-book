@@ -227,36 +227,44 @@ Typeset by Martin Schoeberl.}
 \medskip
 \medskip
 
-It is an exciting time to be in the world of digital design. With the end of Dennard Scaling and the slowing of Moore's Law, there has perhaps never been a greater need for innovation in the field. Semiconductor companies continue to squeeze out every drop of performance they can, but the cost of these improvements has been rising drastically. Chisel reduces this cost by improving productivity. If designers can build more in less time, while amortizing the cost of verification through reuse, companies can spend less on Non-Recurring Engineering (NRE). In addition, both students and individual contributors can innovate more easily on their own.
+%It is an exciting time to be in the world of digital design. With the end of Dennard Scaling and the slowing of Moore's Law, there has perhaps never been a greater need for innovation in the field. Semiconductor companies continue to squeeze out every drop of performance they can, but the cost of these improvements has been rising drastically. Chisel reduces this cost by improving productivity. If designers can build more in less time, while amortizing the cost of verification through reuse, companies can spend less on Non-Recurring Engineering (NRE). In addition, both students and individual contributors can innovate more easily on their own.
 
-Chisel is unlike most languages in that it is embedded in another programming language, Scala. Fundamentally, Chisel is a library of classes and functions representing the primitives necessary to express synchronous, digital circuits. A Chisel design is really a Scala program that \emph{generates} a circuit as it executes. To many, this may seem counterintuitive: ``Why not just make Chisel a stand-alone language like VHDL or SystemVerilog?'' My answer to this question is as follows: the software world has seen a substantial amount of innovation in design methodology in the past couple of decades. Rather than attempting to adapt these techniques to a new hardware language, we can simply \emph{use} a modern programming language and gain those benefits for free.
+目前，数字电路设计是一个令人兴奋的领域。随着 Dennard 缩放比例定律的终结和摩尔定律（Moore's Law）的放缓，对于该领域的创新需求似乎从未如此迫切。半导体公司仍然在竭尽所能的从硬件上榨取每一滴性能，但其相关改进的成本已急剧增加。Chisel 可以通过提高设计效率来降低总的成本花销。如果设计人员可以在更短的时间内完成更多的工作，同时通过复用现有实现来摊销验证成本，则公司可以在一次性工程费用（Non-Recurring Engineering）上花费更少的钱；此外，学生和个人开发者也可以借此更轻松地进行创新工作。
 
-A longstanding criticism of Chisel is that it is ``difficult to learn.'' Much of this perception is due to the prevalence of large, complex designs created by experts to solve their own research or commercial needs. When learning a popular language like C++, one does not start by reading the source code of GCC. Rather, there are a plethora of courses, textbooks, and other learning materials that cater toward newcomers. In \emph{Digital Design with Chisel}, Martin has created an important resource for anyone who wishes to learn Chisel.
+%Chisel is unlike most languages in that it is embedded in another programming language, Scala. Fundamentally, Chisel is a library of classes and functions representing the primitives necessary to express synchronous, digital circuits. A Chisel design is really a Scala program that \emph{generates} a circuit as it executes. To many, this may seem counterintuitive: ``Why not just make Chisel a stand-alone language like VHDL or SystemVerilog?'' My answer to this question is as follows: the software world has seen a substantial amount of innovation in design methodology in the past couple of decades. Rather than attempting to adapt these techniques to a new hardware language, we can simply \emph{use} a modern programming language and gain those benefits for free.
 
-Martin is an experienced educator, and it shows in the organization of this book. Starting with installation and primitives, he builds the reader's understanding like a building, brick-by-brick. The included exercises are the mortar that solidifies understanding, ensuring that each concept sets in the reader's mind. The book culminates with \emph{hardware generators} like a roof giving the rest of the structure purpose. At the end, the reader is left with the knowledge to build a simple, yet useful design: a RISC processor.
+Chisel 不同于其它语言的地方在于它是嵌入到另一个编程语言 Scala 中的领域专用语言（Domain Specified Language 或 DSL）。本质上，Chisel 是一个用来描述和呈现数字电路中基本元素的类和函数库。基于 Chisel 的电路设计其实就是编写 Scala 程序，在执行的过程中\emph{产生} 对应的电路。很多人会产生疑问：``为什么 Chisel不能像 VHDL 或 SystemVerilog 那样作为一门独立的语言？''。我的回答是：在过去的几十年中，软件领域已经在设计方法论方面进行了大量的创新，与其尝试使用这些技术去创建新的硬件语言，不如简单地使用现代编程语言，从而能够直接利用这些软件领域的创新工作。
 
-In \emph{Digital Design with Chisel}, Martin has laid a strong foundation for productive digital design. What you build with it is up to you.
+%A longstanding criticism of Chisel is that it is ``difficult to learn.'' Much of this perception is due to the prevalence of large, complex designs created by experts to solve their own research or commercial needs. When learning a popular language like C++, one does not start by reading the source code of GCC. Rather, there are a plethora of courses, textbooks, and other learning materials that cater toward newcomers. In \emph{Digital Design with Chisel}, Martin has created an important resource for anyone who wishes to learn Chisel.
+
+一个长期存在的对于 Chisel 的批评是它``难以学习''。这种感觉很大程度上因为这些初学者选择了过于复杂的入门示例，而这些大型、复杂的设计往往由专家为解决自己的研究或商业需求而创建。当学习一种比较流行的语言如 C++ 时，我们不是从阅读 GCC 编译器的源代码开始。相反，有许多课程，教科书和其他学习材料来满足这些入门人员。Martin 通过本书为想学习 Chisel 的人提供了一个重要的资源。
+
+%Martin is an experienced educator, and it shows in the organization of this book. Starting with installation and primitives, he builds the reader's understanding like a building, brick-by-brick. The included exercises are the mortar that solidifies understanding, ensuring that each concept sets in the reader's mind. The book culminates with \emph{hardware generators} like a roof giving the rest of the structure purpose. At the end, the reader is left with the knowledge to build a simple, yet useful design: a RISC processor.
+
+Martin 是一位经验丰富的教育家，这在本书的组织结构中得到体现。从安装和基础组件开始，他通过类似构建一栋建筑一样的方式，一步一步地使读者理解所需内容。每章末尾随附的练习是巩固理解的重要补充，可以确保每个概念都牢牢扎根于读者的脑海。书中重要的一章\emph{硬件生成器}贯通了本书所介绍的基本内容。最终，以读者能够掌握构建一个简单而有用的 RISC 处理器结束本书。
+
+%In \emph{Digital Design with Chisel}, Martin has laid a strong foundation for productive digital design. What you build with it is up to you.
+
+Martin 通过本书，为读者能够高效的进行数字设计奠定了坚实的基础。进而，读者可以通过这些基础，构建任何他想要的内容。
 
 \medskip
 \noindent Jack Koenig\\
-Chisel and FIRRTL Maintainer\\
-Staff Engineer, SiFive
-
-\chapter{译序}
-
-\medskip
-\medskip
-这是译序
+Chisel 和 FIRRTL 维护者\\
+SiFive 高级工程师
 
 \let\cleardoublepage\clearpage
 \chapter{前言}
 
 % This text goes on the backside of the book, and in Amazon description
-This book is an introduction to digital design with the focus on using the hardware construction language Chisel. Chisel brings advances from software engineering, such as object-orientated and functional languages, into digital design.
+%This book is an introduction to digital design with the focus on using the hardware construction language Chisel. Chisel brings advances from software engineering, such as object-orientated and functional languages, into digital design.
 
-This book addresses hardware designers and software engineers. Hardware designers, with knowledge of Verilog or VHDL, can upgrade their productivity with a modern language for their next ASIC or FPGA design. Software engineers, with knowledge of object-oriented and functional programming, can leverage their knowledge to program hardware, for example, FPGA accelerators executing in the cloud.
+%This book addresses hardware designers and software engineers. Hardware designers, with knowledge of Verilog or VHDL, can upgrade their productivity with a modern language for their next ASIC or FPGA design. Software engineers, with knowledge of object-oriented and functional programming, can leverage their knowledge to program hardware, for example, FPGA accelerators executing in the cloud.
 
-The approach of this book is to present small to medium-sized typical hardware components to explore digital design with Chisel.
+%The approach of this book is to present small to medium-sized typical hardware components to explore digital design with Chisel.
+
+本书主要内容为使用硬件构建语言 Chisel 进行数字电路设计。Chisel将软件工程中的面向对象和函数式等高级语言特性引入数字电路设计。本书的读者对象为硬件设计人员和软件工程师。具有 Verilog 和 VHDL 背景的硬件设计师可以通过使用更现代的语言来提高他们的工作效率；而具有面向对象和函数式编程经验的软件工程师可以利用他们所掌握的知识对硬件进行编程，例如在云端运行的 FPGA 加速器。
+
+本书通过介绍典型中小规模的硬件电路组件来探索基于 Chisel 的数字电路设计。
 
 % about me, backside
 
@@ -266,125 +274,151 @@ The approach of this book is to present small to medium-sized typical hardware c
 
 \section*{第二版序}
 
-As Chisel allows agile hardware design, so does open access and on-demand printing
-allow agile textbook publishing. Less than 6 months after the first edition of this book
-I am able to provide an improved and extended second edition.
+%As Chisel allows agile hardware design, so does open access and on-demand printing
+%allow agile textbook publishing. Less than 6 months after the first edition of this book
+%I am able to provide an improved and extended second edition.
 
-Besides minor fixes, the main changes in the second edition are as follows.
-The testing section has been extended. The sequential building blocks chapter contains
-more example circuits. A new chapter on input processing explains input synchronization,
-shows how to design a debouncing circuit, and how to filter a noisy input signal.
-The example designs chapter has been extended to show different implementations of a FIFO.
-The FIFO variations also show how to use type parameters and inheritance in digital design. 
+%Besides minor fixes, the main changes in the second edition are as follows.
+%The testing section has been extended. The sequential building blocks chapter contains
+%more example circuits. A new chapter on input processing explains input synchronization,
+%shows how to design a debouncing circuit, and how to filter a noisy input signal.
+%The example designs chapter has been extended to show different implementations of a FIFO.
+%The FIFO variations also show how to use type parameters and inheritance in digital design. 
 
-\section*{第三版序}
+类似 Chisel 允许通过敏捷方法设计硬件，开放访问和按需印刷使得通过敏捷的方式发布教科书成为可能。因此，在本书第一版发布后不到6个月的时间内，作者可以提供改进和修订之后的第二版。
 
-Chisel has been moving forward in the last year, so it is time for a new edition
-of the Chisel book.
+除了少量的问题修复，第二版的主要变化如下：\\
+扩充测试章节内容；时序逻辑电路构建模块一章包含更多的示例；一个新的章节用来介绍同步输入信号的处理，内容包括消除电路中的抖动和对输入信号中的噪声进行过滤。扩充设计示例一章来介绍不同的 FIFO 设计实现，这些 FIFO 变种也展示了在进行数字设计时如何使用类型参数和继承等特性。
 
-We changed all examples to the latest version of Chisel (3.4.1) and the recommended
-Scala version (2.12.12).
+%\section*{第三版序}
+
+%Chisel has been moving forward in the last year, so it is time for a new edition
+%of the Chisel book.
+
+%We changed all examples to the latest version of Chisel (3.4.1) and the recommended
+%Scala version (2.12.12).
 
 
 \section*{致谢}
 
-I want to thank everyone who has worked on Chisel for creating such
-a cool hardware construction language. Chisel is so joyful to use and
-therefore worth writing a book about.
-I am thankful to the whole Chisel community, which is so welcoming and friendly
-and never tired to answer questions on Chisel.
+%I want to thank everyone who has worked on Chisel for creating such
+%a cool hardware construction language. Chisel is so joyful to use and
+%therefore worth writing a book about.
+%I am thankful to the whole Chisel community, which is so welcoming and friendly
+%and never tired to answer questions on Chisel.
 
-I would also like to thank my students in the last years of an advanced computer
-architecture course where most of them picked up Chisel for the final project.
-Thank you for moving out of your comfort zone and taking up the journey of
-learning and using a bleeding-edge hardware description language.
-Many of your questions have helped to shape this book.
+%I would also like to thank my students in the last years of an advanced computer
+%architecture course where most of them picked up Chisel for the final project.
+%Thank you for moving out of your comfort zone and taking up the journey of
+%learning and using a bleeding-edge hardware description language.
+%Many of your questions have helped to shape this book.
 
+感谢所有 Chisel 的开发者，感谢他们创建了如此酷的硬件构建语言。Chisel 使用起来非常愉快，因此值得为此写一本书。
+感谢整个 Chisel 社区，它热情，友好而乐于回答有关 Chisel 的任何问题。
+
+我还要感谢最近几年中，学习高级计算机体系结构课程的我的学生，他们中的大多数人都选择了 Chisel 作为毕业项目。感谢你们避开舒适的环境，而选择学习和使用最新的硬件描述语言，你们的很多问题帮助塑造了本书。
 
 \mainmatter
 
 \chapter{概述}
 \label{sec:intro}
 
-This book is an introduction to digital system design using a modern hardware
-construction language, \myref{https://www.chisel-lang.org/}{Chisel}~\cite{chisel:dac2012}.
-In this book, we focus on a higher abstraction level than usual in digital design books,
-to enable you to build more complex, interacting digital systems in a shorter time.
+%This book is an introduction to digital system design using a modern hardware
+%construction language, \myref{https://www.chisel-lang.org/}{Chisel}~\cite{chisel:dac2012}.
+%In this book, we focus on a higher abstraction level than usual in digital design books,
+%to enable you to build more complex, interacting digital systems in a shorter time.
 
-This book and Chisel are targeting two groups of developers:
-(1) hardware designers and (2) software programmers.
-Hardware designers who are fluid in VHDL or Verilog and using other languages such as Python,
-Java, or Tcl to generate hardware can move to a single hardware construction language
-where hardware generation is part of the language.
-Software programmers may become interested in hardware design,
-e.g., as future chips from Intel will include programmable hardware to speed up programs.
-It is perfectly fine to use Chisel as your first hardware description language.
+本书主要介绍使用现代硬件构建语言 \myref{https://www.chisel-lang.org/}{Chisel}~\cite{chisel:dac2012} 进行数字系统设计。在本书中，我们主要关注于在一个较高级别的抽象层次和短时间内，设计相对复杂、可交互的数字电路系统。
 
-Chisel brings advances in software engineering, such as object-orientated
-and functional languages, into digital design.
-Chisel does not only allow to express hardware at the register-transfer level
-but allows you to write hardware generators.
+%This book and Chisel are targeting two groups of developers:
+%(1) hardware designers and (2) software programmers.
+%Hardware designers who are fluid in VHDL or Verilog and using other languages such as Python,
+%Java, or Tcl to generate hardware can move to a single hardware construction language
+%where hardware generation is part of the language.
+%Software programmers may become interested in hardware design,
+%e.g., as future chips from Intel will include programmable hardware to speed up programs.
+%It is perfectly fine to use Chisel as your first hardware description language.
 
-Hardware is now commonly described with a hardware description language.
-The time of drawing hardware components, even with CAD tools, is
-over. Some high-level schematics can give an overview of the system but are
-not intended to describe the system.
-The two most common hardware description languages are Verilog and VHDL.
-Both languages are old, contain many legacies, and have a moving line of what
-constructs of the language are synthesizable to hardware.
-Do not get me wrong: VHDL and Verilog are perfectly able to describe a hardware
-block that can be synthesized into an
-\myref{https://en.wikipedia.org/wiki/Application-specific_integrated_circuit}{ASIC}.
-For hardware design in Chisel, Verilog serves as an intermediate language
-for testing and synthesis.
+本书读者对象为两组不同的开发者：(1) 硬件设计师 和 (2) 软件工程师，擅长 VHDL 或者 Verilog 语言的硬件设计人员，他们往往也使用 Python，Java 或者 Tcl 来生成硬件，这些设计人员可以迁移到一个单一的硬件构建语言，而硬件生成功能是这门语言自身的一部分。软件工程师或许也开始对硬件设计感兴趣，例如未来的 Intel 芯片将会包含可编程结构来加速执行程序。将 Chisel 作为首次使用的硬件描述语言是一个非常不错的选择。
 
-This book is not a general introduction to hardware design and the fundamentals of it.
-For an introduction of the basics in digital design, such as how to build a gate out of
-CMOS transistors, refer to other digital design books.
-However, this book intends to teach digital design at an abstraction level that is
-current practice to describe ASICs or designs targeting
-\myref{https://en.wikipedia.org/wiki/Field-programmable_gate_array}{FPGA}s.\footnote{As the author is more familiar with FPGAs
-than ASICs as target technology, some design optimizations shown in this book are
-targeting FPGA technology.}
-As prerequisites for this book, we assume basic knowledge of
-\myref{https://en.wikipedia.org/wiki/Boolean_algebra}{Boolean algebra} and the
-\myref{https://en.wikipedia.org/wiki/Binary_number}{binary number system}.
-Furthermore, some programming experience in any programming language
-is assumed. No knowledge of Verilog or VHDL is needed.
-Chisel can be your first programming language to describe digital hardware.
-As the build process in the examples is based on \code{sbt} and \code{make},
-basic knowledge of the command-line interface (CLI, also called terminal or
-Unix shell) will be helpful.
+%Chisel brings advances in software engineering, such as object-orientated
+%and functional languages, into digital design.
+%Chisel does not only allow to express hardware at the register-transfer level
+%but allows you to write hardware generators.
 
-Chisel itself is not a big language. The basic constructs fit on
-\myref{https://github.com/freechipsproject/chisel-cheatsheet/releases/latest/download/chisel_cheatsheet.pdf}{one page}
-and can be learned within a few days.
-Therefore, this book is not a big book, as well.
-Chisel is for sure smaller than VHDL and Verilog, which carry many legacies.
-The power of Chisel comes from the embedding of Chisel within
-\myref{https://www.scala-lang.org/}{Scala}, which itself in an expressive language.
-Chisel inherits the feature from Scala being ``a language that grows on you''~\cite{Scala}.
-However, Scala is not the topic of this book.
-We provide a short section on Scala for hardware designers.
-The textbook by Odersky et al.~\cite{Scala} provides a general introduction
-to Scala.
-This book is a tutorial in digital design and the Chisel language; it is not
-a Chisel language reference, nor is it a book on complete chip design.
+Chisel 将软件工程中的面向对象和函数式等高级语言特性引入数字设计。Chisel 不仅允许在寄存器传输级描述硬件电路，而且也允许读者编写硬件生成器。
 
+%Hardware is now commonly described with a hardware description language.
+%The time of drawing hardware components, even with CAD tools, is
+%over. Some high-level schematics can give an overview of the system but are
+%not intended to describe the system.
+%The two most common hardware description languages are Verilog and VHDL.
+%Both languages are old, contain many legacies, and have a moving line of what
+%constructs of the language are synthesizable to hardware.
+%Do not get me wrong: VHDL and Verilog are perfectly able to describe a hardware
+%block that can be synthesized into an
+%\myref{https://en.wikipedia.org/wiki/Application-specific_integrated_circuit}{ASIC}.
+%For hardware design in Chisel, Verilog serves as an intermediate language
+%for testing and synthesis.
 
-All code examples shown in this book are extracted from complete programs
-that have been compiled and tested. Therefore, the code shall not contain
-any syntax errors. The code examples are available from the
-\myref{https://github.com/schoeberl/chisel-book}{GitHub repository}
-of this book.
-Besides showing Chisel code, we have also tried to show useful designs and
-principles of good hardware description style.
+目前，硬件电路通常使用硬件描述语言来构建。使用 CAD 工具绘制硬件组件的时代早就成为过去，一些高级别的原理图可以用来概述整个系统，但不会用来描述系统实现。两种经常使用的硬件描述语言分别是 Verilog 和 VHDL。两种语言都比较古老，具有许多过时的特性，并且对于语言的哪些结构能够综合为硬件具有不断变化的标准。然而，不要误解，VHDL 和 Verilog 确实都能够很好的描述可综合到 \myref{https://en.wikipedia.org/wiki/Application-specific_integrated_circuit}{ASIC} 的硬件。使用 Chisel 进行硬件设计时，Verilog 作为一种中间语言存在，用来进行测试和综合。
 
-This book is optimized for reading on a laptop or tablet (e.g., an iPad).
-We include links to further reading in the running text, mostly to
-\myref{https://en.wikipedia.org/}{Wikipedia} articles.
+%This book is not a general introduction to hardware design and the fundamentals of it.
+%For an introduction of the basics in digital design, such as how to build a gate out of
+%CMOS transistors, refer to other digital design books.
+%However, this book intends to teach digital design at an abstraction level that is
+%current practice to describe ASICs or designs targeting
+%\myref{https://en.wikipedia.org/wiki/Field-programmable_gate_array}{FPGA}s.\footnote{As the author is more familiar with FPGAs
+%than ASICs as target technology, some design optimizations shown in this book are
+%targeting FPGA technology.}
+%As prerequisites for this book, we assume basic knowledge of
+%\myref{https://en.wikipedia.org/wiki/Boolean_algebra}{Boolean algebra} and the
+%\myref{https://en.wikipedia.org/wiki/Binary_number}{binary number system}.
+%Furthermore, some programming experience in any programming language
+%is assumed. No knowledge of Verilog or VHDL is needed.
+%Chisel can be your first programming language to describe digital hardware.
+%As the build process in the examples is based on \code{sbt} and \code{make},
+%basic knowledge of the command-line interface (CLI, also called terminal or
+%Unix shell) will be helpful.
 
-\section{安装 Chisel 和 FPGA 工具}
+本书不是一本专门用来介绍电路设计基础的书，如果你想寻找有关数字电路基础的内容，例如，如何通过 CMOS 晶体管构建门电路，请参考其它数字电路设计书籍。本书主要目的在于教授在一个抽象层次上以 ASIC 或 \myref{https://en.wikipedia.org/wiki/Field-programmable_gate_array}{FPGA} 为目标的数字电路设计。
+\footnote{相对于 ASIC，作者对 FPGA 更为熟悉些，本书中呈现的一些设计优化主要面向 FPGA 工艺。}
+阅读本书的前置条件是，我们假设读者具有基本的 \myref{https://en.wikipedia.org/wiki/Boolean_algebra}{布尔代数} 和 \myref{https://en.wikipedia.org/wiki/Binary_number}{二进制系统} 的知识，当然，还需要一些基本的编程经验（任何语言均可）。本书不需要读者熟悉 Verilog 或 VHDL，Chisel 可以做为你的第一种数字硬件描述语言。由于本书示例代码的构建基于\code{sbt} 和 \code{make}，因此，基本的命令行（也叫做终端或Unix shell）使用经验将会很有帮助。
+
+%Chisel itself is not a big language. The basic constructs fit on
+%\myref{https://github.com/freechipsproject/chisel-cheatsheet/releases/latest/download/chisel_cheatsheet.pdf}{one page}
+%and can be learned within a few days.
+%Therefore, this book is not a big book, as well.
+%Chisel is for sure smaller than VHDL and Verilog, which carry many legacies.
+%The power of Chisel comes from the embedding of Chisel within
+%\myref{https://www.scala-lang.org/}{Scala}, which itself in an expressive language.
+%Chisel inherits the feature from Scala being ``a language that grows on you''~\cite{Scala}.
+%However, Scala is not the topic of this book.
+%We provide a short section on Scala for hardware designers.
+%The textbook by Odersky et al.~\cite{Scala} provides a general introduction
+%to Scala.
+%This book is a tutorial in digital design and the Chisel language; it is not
+%a Chisel language reference, nor is it a book on complete chip design.
+
+Chisel 自身并不是一种很庞大的语言，其基本的结构可以用\myref{https://github.com/freechipsproject/chisel-cheatsheet/releases/latest/download/chisel_cheatsheet.pdf}{一页}内容描述，并且可以在几天内掌握。因此，本书也不会是一本很复杂的书。Chisel 的内容要比 VHDL 和 Verilog 少的多。Chisel 真正强大的地方在于其嵌入在一个富有表现力的 \myref{https://www.scala-lang.org/}{Scala} 语言之中。Chisel 继承了 Scala ``和你一同成长''~\cite{Scala} 的语言特性。不过，Scala 并不是本书的主题，我们提供了一个较短的章节来向硬件设计人员介绍 Scala。由 Odersky ~\cite{Scala} 等人编写的参考书对 Scala 进行了详细的介绍。另外，本书是一本数字电路设计和Chisel语言特性的基本指南，不是有关 Chisel 的 API 参考手册，也不是一本详细描述芯片设计的书。
+
+%All code examples shown in this book are extracted from complete programs
+%that have been compiled and tested. Therefore, the code shall not contain
+%any syntax errors. The code examples are available from the
+%\myref{https://github.com/schoeberl/chisel-book}{GitHub repository}
+%of this book.
+%Besides showing Chisel code, we have also tried to show useful designs and
+%principles of good hardware description style.
+
+%This book is optimized for reading on a laptop or tablet (e.g., an iPad).
+%We include links to further reading in the running text, mostly to
+%\myref{https://en.wikipedia.org/}{Wikipedia} articles.
+
+本书中所有的代码示例提取自可编译和测试的完整程序，因此，代码应该不会包含语法错误。代码示例存储在本书的 \myref{https://github.com/schoeberl/chisel-book}{GitHub 仓库}。除了展示代码本身，我们也想向读者展示一些有用的设计和良好的硬件描述风格。
+
+本书针对笔记本和平板电脑（如 iPad）进行了优化，我们在一些文本中包含了辅助阅读内容的链接，这些内容大多指向\myref{https://en.wikipedia.org/}{维基百科}中的文章。
+
+\section{安装 Chisel 工具}
 
 Chisel is a Scala library, and the easiest way to install Chisel and Scala is
 with \code{sbt}, the Scala build tool. Scala itself depends on the installation
@@ -436,41 +470,48 @@ When importing a project, {\textbf select the JDK 1.8} you installed before (not
 \myref{https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Windows.html}{Installing sbt on Windows}.
 Install a \myref{https://git-scm.com/download/win}{git client}.
 
-\subsection{FPGA 工具}
-
-To build hardware for an FPGA, you need a synthesize tool. The two major
-FPGA vendors, Intel\footnote{former Altera} and Xilinx, provide free versions of
-their tools that cover small to medium-sized FPGAs. Those medium-sized
-FPGAs are large enough to build multicore RISC style processors.
-Intel provides the \myref{https://www.altera.com/products/design-software/fpga-design/quartus-prime/download.html}{Quartus Prime Lite Edition} and Xilinx the
-\myref{https://www.xilinx.com/products/design-tools/vivado/vivado-webpack.html}{Vivado Design Suite, WebPACK Edition}.
-Both tools are available for Windows and Linux, but not for macOS.
+%\subsection{FPGA 工具}
+%
+%To build hardware for an FPGA, you need a synthesize tool. The two major
+%FPGA vendors, Intel\footnote{former Altera} and Xilinx, provide free versions of
+%their tools that cover small to medium-sized FPGAs. Those medium-sized
+%FPGAs are large enough to build multicore RISC style processors.
+%Intel provides the \myref{https://www.altera.com/products/design-software/fpga-design/quartus-prime/download.html}{Quartus Prime Lite Edition} and Xilinx the
+%\myref{https://www.xilinx.com/products/design-tools/vivado/vivado-webpack.html}{Vivado Design Suite, WebPACK Edition}.
+%Both tools are available for Windows and Linux, but not for macOS.
 
 \section{Hello World}
 
-Each book on a programming language shall start with a minimal example,
-called the \emph{Hello World} example. Following code is the first approach:
+%Each book on a programming language shall start with a minimal example,
+%called the \emph{Hello World} example. Following code is the first approach:
 
+基本上，每本介绍编程语言的书都会有一个叫作 \emph{Hello World} 的最小示例，以下即遵循该范式的代码：
 
 \shortlist{src/main/scala/HelloScala.scala}
 
 
-\noindent Compiling and executing this short program with \code{sbt}
+%\noindent Compiling and executing this short program with \code{sbt}
+
+通过 \code{sbt} 工具编译和执行该程序
 
 \begin{chisel}
 $ sbt run
 \end{chisel}
 
-\noindent leads to the expected output of a Hello World program:
+%\noindent leads to the expected output of a Hello World program:
+
+产生如下输出：
 
 \begin{chisel}
 [info] Running HelloScala
 Hello Chisel World!
 \end{chisel}
 
-\noindent However, is this Chisel? Is this hardware generated to print a string?
-No, this is plain Scala code and not a representative Hello World
-program for a hardware design.
+%\noindent However, is this Chisel? Is this hardware generated to print a string?
+%No, this is plain Scala code and not a representative Hello World
+%program for a hardware design.
+
+然而，这是 Chisel 代码吗？或者一个用来打印字符串的硬件电路？并不是，它仅仅是纯粹的 Scala 代码，还不足以表示硬件设计中的 ``Hello World''。
 
 \section{Chisel Hello World}
 
@@ -554,102 +595,118 @@ We optimized the format of the eBook for reading on a tablet, such as an iPad.
 
 \section{辅助阅读}
 
-Here a list of further reading for digital design and Chisel:
+%Here a list of further reading for digital design and Chisel:
+这里列出了数字电路设计和有关 Chisel 的一些辅助阅读材料：
 \begin{itemize}
-\item \myref{http://www.cambridge.org/es/academic/subjects/engineering/circuits-and-systems/digital-design-systems-approach}{Digital Design: A Systems Approach}, by William J. Dally and R. Curtis Harting,
-is a modern textbook on digital design. It is available in two versions: using Verilog or VHDL as a hardware description language.
+%\item \myref{http://www.cambridge.org/es/academic/subjects/engineering/circuits-and-systems/digital-design-systems-approach}{Digital Design: A Systems Approach}, by William J. Dally and R. Curtis Harting,
+%is a modern textbook on digital design. It is available in two versions: using Verilog or VHDL as a hardware description language.
+
+\item
+\myref{http://www.cambridge.org/es/academic/subjects/engineering/circuits-and-systems/digital-design-systems-approach}{Digital Design: A Systems Approach} 是一本较新的关于数字电路设计的的教材，它有两个版本：分别使用 Verilog 或 VHDL 作为硬件描述语言。
+
 \end{itemize}
 
-The official Chisel documentation and further documents are available online:
+%The official Chisel documentation and further documents are available online:
+Chisel 官方和其它在线文档：
 
 \begin{itemize}
-\item The \myref{https://www.chisel-lang.org/}{Chisel} home page is the official starting point to
-download and learn Chisel.
-\item The \myref{https://github.com/ucb-bar/chisel-tutorial}{Chisel Tutorial} provides a ready setup
-project containing small exercises with testers and solutions.
+%\item The \myref{https://www.chisel-lang.org/}{Chisel} home page is the official starting point to
+%download and learn Chisel.
+%\item The \myref{https://github.com/ucb-bar/chisel-tutorial}{Chisel Tutorial} provides a ready setup
+%project containing small exercises with testers and solutions.
+%
+%\item The \myref{https://github.com/freechipsproject/chisel3/wiki}{Chisel Wiki} contains
+%a short users guide to Chisel and links to further information.
+%\item The \myref{https://github.com/freechipsproject/chisel-testers}{Chisel Testers} are in
+%their own repository that contains a Wiki documentation.
+%\item The \myref{https://github.com/freechipsproject/chisel-bootcamp}{Generator Bootcamp} is
+%a Chisel course focusing on hardware generators, as a \myref{https://jupyter.org/}{Jupyter} notebook
+%\item A \myref{https://github.com/ccelio/chisel-style-guide}{Chisel Style Guide} by Christopher Celio.
+%\item The \myref{https://github.com/schoeberl/chisel-lab}{chisel-lab} contains Chisel exercises for the
+%course ``Digital Electronics 2'' at the Technical University of Denmark.
 
-\item The \myref{https://github.com/freechipsproject/chisel3/wiki}{Chisel Wiki} contains
-a short users guide to Chisel and links to further information.
-\item The \myref{https://github.com/freechipsproject/chisel-testers}{Chisel Testers} are in
-their own repository that contains a Wiki documentation.
-\item The \myref{https://github.com/freechipsproject/chisel-bootcamp}{Generator Bootcamp} is
-a Chisel course focusing on hardware generators, as a \myref{https://jupyter.org/}{Jupyter} notebook
-\item A \myref{https://github.com/ccelio/chisel-style-guide}{Chisel Style Guide} by Christopher Celio.
-\item The \myref{https://github.com/schoeberl/chisel-lab}{chisel-lab} contains Chisel exercises for the
-course ``Digital Electronics 2'' at the Technical University of Denmark.
+\item \myref{https://www.chisel-lang.org/}{Chisel} 官方主页是下载和学习 Chisel 的起点.
+\item \myref{https://github.com/ucb-bar/chisel-tutorial}{Chisel Tutorial} 提供包含测试和解决方案的练习项目
+
+\item \myref{https://github.com/freechipsproject/chisel3/wiki}{Chisel Wiki} 包含有关 Chisel 的用户指南和更多内容链接
+\item \myref{https://github.com/freechipsproject/chisel-testers}{Chisel Testers} 在其代码仓库中可以找到详细介绍的 Wiki 文档
+\item \myref{https://github.com/freechipsproject/chisel-bootcamp}{Generator Bootcamp} 以\myref{https://jupyter.org/}{Jupyter}笔记形式展示基于 Chisel 的硬件生成器设计
+\item \myref{https://github.com/schoeberl/chisel-lab}{chisel-lab} 包含一些丹麦技术大学``Digital Electronics 2''课程的 Chisel 练习
+
 \end{itemize}
 
-\section{练习}
+\footnote{译者注：为避免 Chisel 初学者困惑，本书在翻译时移除了和 FPGA 有关的内容和练习，如有需要请参考原文}
+%\section{练习}
 
-Each chapter ends with a hands-on exercise. For the introduction exercise, we will use an
-FPGA board to get one \myref{https://en.wikipedia.org/wiki/Light-emitting_diode}{LED}
-blinking.\footnote{If you at the moment have no FPGA board available, continue to read
-as we will show you a simulation version at the end of the exercise.}
-As a first step clone (or fork) the \myref{https://github.com/schoeberl/chisel-examples}{chisel-examples}
-repository from GitHub.
-The Hello World example is in the folder \code{hello-world}, set up as
-a minimal project. You can explore the Chisel code of the blinking LED
-in \code{src/main/scala/Hello.scala}.
-Compile the blinking LED with the following steps:
+%Each chapter ends with a hands-on exercise. For the introduction exercise, we will use an
+%FPGA board to get one \myref{https://en.wikipedia.org/wiki/Light-emitting_diode}{LED}
+%blinking.\footnote{If you at the moment have no FPGA board available, continue to read
+%as we will show you a simulation version at the end of the exercise.}
+%As a first step clone (or fork) the \myref{https://github.com/schoeberl/chisel-examples}{chisel-examples}
+%repository from GitHub.
+%The Hello World example is in the folder \code{hello-world}, set up as
+%a minimal project. You can explore the Chisel code of the blinking LED
+%in \code{src/main/scala/Hello.scala}.
+%Compile the blinking LED with the following steps:
+%
+%\begin{verbatim}
+%$ git clone https://github.com/schoeberl/chisel-examples.git
+%$ cd chisel-examples/hello-world/
+%$ sbt run
+%\end{verbatim}
+%
+%After some initial downloading of Chisel components, this will produce the Verilog file \code{Hello.v}.
+%Explore this Verilog file. You will see that it contains two inputs \code{clock} and \code{reset}
+%and one output \code{io\_led}. When you compare this Verilog file with the Chisel module,
+%you will notice that the Chisel module does not contain \code{clock} or \code{reset}.
+%Those signals are implicitly generated, and in most designs, it is convenient not to need to
+%deal with these low-level details. Chisel provides register components, and those
+%are connected automatically to \code{clock} and \code{reset} (if needed).
+%
+%The next step is to set up an FPGA project file for the synthesize tool, assign the pins,
+%compile\footnote{The real process is more elaborated with following steps: synthesizing the logic,
+%performing place and route, performing timing analysis, and generating a bitfile.
+%However, for the purpose of this introduction example we simply call it ``compile''
+%your code.} the Verilog code, and configure the FPGA with the resulting bitfile.
+%We cannot provide the details of these steps. Please consult the manual of
+%your Intel Quartus or Xilinx Vivado tool.
+%However, the examples repository contains some ready to use Quartus
+%projects in folder \code{quartus} for several popular FPGA boards (e.g., DE2-115).
+%If the repository contains support for your board, start Quartus, open the project,
+%compile it by pressing the \emph{Play} button, and configure the FPGA board
+%with the \emph{Programmer} button and one of the LEDs should blink.
+%
+%{\bf Gratulation! You managed to get your first design in Chisel running in an FPGA!}
+%
+%If the LED is not blinking, check the status of reset. On the DE2-115 configuration,
+%the reset input is connected to SW0.
+%
+%Now change the blinking frequency to a slower or a faster value and
+%rerun the build process. Blinking frequencies and also blinking patterns
+%communicate different ``emotions''. E.g., a slow blinking LED signals that
+%everything is ok, a fast blinking LED signals an alarm state.
+%Explore which frequencies express best those two different emotions.
+%
+%As a more challenging extension to the exercise, generate the following blinking pattern:
+%the LED shall be on for 200~ms every second. For this pattern, you might
+%decouple the change of the LED blinking from the counter reset.
+%You will need a second constant where you change the state of the
+%\code{blkReg} register. What kind of emotion does this pattern produce?
+%Is it alarming or more like a sign-of-live signal?
 
-\begin{verbatim}
-$ git clone https://github.com/schoeberl/chisel-examples.git
-$ cd chisel-examples/hello-world/
-$ sbt run
-\end{verbatim}
+%If you do not have an FPGA board (yet), you can still run the blinking LED example.
+%You will use  the Chisel simulation. To avoid a too long simulation time change the
+%clock frequency in the Chisel code from 50000000 to 50000. Execute following
+%instruction to simulate the blinking LED:
 
-After some initial downloading of Chisel components, this will produce the Verilog file \code{Hello.v}.
-Explore this Verilog file. You will see that it contains two inputs \code{clock} and \code{reset}
-and one output \code{io\_led}. When you compare this Verilog file with the Chisel module,
-you will notice that the Chisel module does not contain \code{clock} or \code{reset}.
-Those signals are implicitly generated, and in most designs, it is convenient not to need to
-deal with these low-level details. Chisel provides register components, and those
-are connected automatically to \code{clock} and \code{reset} (if needed).
+%\begin{verbatim}
+%$ sbt test
+%\end{verbatim}
 
-The next step is to set up an FPGA project file for the synthesize tool, assign the pins,
-compile\footnote{The real process is more elaborated with following steps: synthesizing the logic,
-performing place and route, performing timing analysis, and generating a bitfile.
-However, for the purpose of this introduction example we simply call it ``compile''
-your code.} the Verilog code, and configure the FPGA with the resulting bitfile.
-We cannot provide the details of these steps. Please consult the manual of
-your Intel Quartus or Xilinx Vivado tool.
-However, the examples repository contains some ready to use Quartus
-projects in folder \code{quartus} for several popular FPGA boards (e.g., DE2-115).
-If the repository contains support for your board, start Quartus, open the project,
-compile it by pressing the \emph{Play} button, and configure the FPGA board
-with the \emph{Programmer} button and one of the LEDs should blink.
-
-{\bf Gratulation! You managed to get your first design in Chisel running in an FPGA!}
-
-If the LED is not blinking, check the status of reset. On the DE2-115 configuration,
-the reset input is connected to SW0.
-
-Now change the blinking frequency to a slower or a faster value and
-rerun the build process. Blinking frequencies and also blinking patterns
-communicate different ``emotions''. E.g., a slow blinking LED signals that
-everything is ok, a fast blinking LED signals an alarm state.
-Explore which frequencies express best those two different emotions.
-
-As a more challenging extension to the exercise, generate the following blinking pattern:
-the LED shall be on for 200~ms every second. For this pattern, you might
-decouple the change of the LED blinking from the counter reset.
-You will need a second constant where you change the state of the
-\code{blkReg} register. What kind of emotion does this pattern produce?
-Is it alarming or more like a sign-of-live signal?
-
-If you do not have an FPGA board (yet), you can still run the blinking LED example.
-You will use  the Chisel simulation. To avoid a too long simulation time change the
-clock frequency in the Chisel code from 50000000 to 50000. Execute following
-instruction to simulate the blinking LED:
-
-\begin{verbatim}
-$ sbt test
-\end{verbatim}
-
-This will execute the tester that runs for one million clock cycles.
-The blinking frequency depends on the simulation speed, which depends on the
-speed of your computer. Therefore, you might need to experiment a little bit
-with the assumed clock frequency to see the simulated blinking LED.
+%This will execute the tester that runs for one million clock cycles.
+%The blinking frequency depends on the simulation speed, which depends on the
+%speed of your computer. Therefore, you might need to experiment a little bit
+%with the assumed clock frequency to see the simulated blinking LED.
 
 \chapter{基础组件}
 
